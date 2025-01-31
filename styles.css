@@ -1,0 +1,93 @@
+:root {
+    --primary: #4A90E2;
+    --primary-hover: #357ABD;
+    --background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --border-radius: 1rem;
+    --input-border: #ddd;
+    --input-focus-border: #4A90E2;
+    --input-focus-shadow: rgba(74, 144, 226, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--background);
+    padding: 1rem;
+}
+
+.container {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 480px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+button {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+button:hover {
+    background: var(--primary-hover);
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--input-border);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.input-field:focus {
+    border-color: var(--input-focus-border);
+    box-shadow: 0 0 5px var(--input-focus-shadow);
+    outline: none;
+}
+
+.conversion-screen {
+    display: none;
+}
+
+.conversion-screen.active {
+    display: block;
+}
+
+.credit {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.credit strong {
+    color: var(--primary);
+}

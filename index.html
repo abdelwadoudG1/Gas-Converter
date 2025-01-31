@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Gas Flow Converter - HADDED Abdelwadoud</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔁 Gas Flow Converter</h1>
+        
+        <!-- Conversion Interface -->
+        <div id="converter">
+            <div class="button-group">
+                <button class="btn" onclick="showKgToPercentage()">⚖️ kg/hr → %</button>
+                <button class="btn" onclick="showPercentageToKg()">📈 % → kg/hr</button>
+            </div>
+        </div>
+
+        <!-- Conversion Screens -->
+        <div id="kgToPercentage" class="conversion-screen active">
+            <input type="number" id="kgInput" placeholder="Enter gas flow (kg/hr)" class="input-field">
+            <button class="btn" onclick="convertKgToPercentage()">Convert</button>
+            <div class="result" id="kgResult"></div>
+            <button class="btn back-button" onclick="goBack()">← Back</button>
+        </div>
+
+        <div id="percentageToKg" class="conversion-screen hidden">
+            <input type="number" id="percentInput" placeholder="Enter percentage" class="input-field">
+            <button class="btn" onclick="convertPercentageToKg()">Convert</button>
+            <div class="result" id="percentResult"></div>
+            <button class="btn back-button" onclick="goBack()">← Back</button>
+        </div>
+
+        <!-- Credit Footer -->
+        <footer class="credit">
+            Developed by <strong>HADDED Abdelwadoud</strong>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
